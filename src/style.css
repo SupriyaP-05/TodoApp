@@ -1,0 +1,40 @@
+.input {
+    display: flex;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 20px;
+    width: 90%;
+}
+textarea:focus, input:focus, select:focus {
+    outline: none;
+}
+
+select {
+  border: none;
+}
+
+.textareas {
+    display: flex;
+    margin: 10px;
+    width: 90%;
+}
+.edit-icon {
+    position: absolute;
+    right: 8.6%;
+    margin-top: -20px;
+    cursor: pointer;
+}
+
+.completeStatus {
+    color: #008000;
+}
+.inprogressStatus {
+    color: #0000FF;
+}
+.normalStatus {
+    color: orange
+}
+option {
+    color: black
+}
