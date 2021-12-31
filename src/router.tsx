@@ -8,7 +8,7 @@ class Routers extends Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/list" element={<Weathers />} />
+                    <Route path="/" element={<Weathers />} />
                     <Route path="/add" element={<AddTodoForm />} />
                 </Routes>
             </BrowserRouter>
