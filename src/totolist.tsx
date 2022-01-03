@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Edit from "./assets/icons8-edit.svg"
 import { Todo } from "./types";
 
-export const Weathers: React.FC<RouteComponentProps> = (props) => {
+export const Todos: React.FC<RouteComponentProps> = (props) => {
     const navigate = useNavigate();
     const [Todos, setTodos] = useState([]);
 
@@ -33,6 +33,8 @@ export const Weathers: React.FC<RouteComponentProps> = (props) => {
             <ListContainer>
                 <ListHeading>Todo List</ListHeading>
                 {
+                    Todos !== null &&
+
                     Todos.map((data: Todo, index: number) => {
                         return (
                             <ListCard key={index}>
@@ -59,4 +61,4 @@ export const Weathers: React.FC<RouteComponentProps> = (props) => {
     );
 };
 
-export default Weathers;
+export default Todos;

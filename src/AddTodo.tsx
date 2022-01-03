@@ -17,7 +17,11 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
     useEffect(() => {
         setCurrentIndex(location.state.index);
         const todos = JSON.parse(localStorage.getItem("todolist"));
-        setTodolist(todos);
+        if (todos === null) {
+            setTodolist([]);
+        } else {
+            setTodolist(todos);
+        }
         if (currentIndex >= 0) {
             setResult(todolist[currentIndex]);
         }
@@ -38,7 +42,7 @@ export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
             todolist.push(NewObj);
         }
         localStorage.setItem("todolist", JSON.stringify(todolist));
-        navigate("/list");
+        navigate("/");
     }
 
     return (

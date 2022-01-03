@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Weathers } from './totolist.tsx';
+import { Todos } from './totolist.tsx';
 import {AddTodoForm} from "./AddTodo.tsx";
 
 class Routers extends Component {
@@ -8,7 +8,7 @@ class Routers extends Component {
         return (
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Weathers />} />
+                    <Route path="/" element={<Todos />} />
                     <Route path="/add" element={<AddTodoForm />} />
                 </Routes>
             </BrowserRouter>
